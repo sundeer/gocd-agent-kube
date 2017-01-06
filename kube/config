@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Config
+clusters:
+- cluster:
+    api-version: v1
+    insecure-skip-tls-verify: true
+    server: "https://52.211.127.39:8080/r/projects/1a7/kubernetes"
+  name: "k8s"
+contexts:
+- context:
+    cluster: "k8s"
+    user: "k8s"
+  name: "k8s"
+current-context: "k8s"
+users:
+- name: "k8s"
+  user:
+    username: "BFD0513790656AD619B4"
+    password: "Kq1V1gpQMtnVhqjpnk7npSDhwWciYWopGJwyx5S8"
