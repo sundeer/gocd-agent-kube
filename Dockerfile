@@ -9,3 +9,5 @@ RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s
     mv ./kubectl /usr/local/bin/kubectl && \
     mkdir /kube
 COPY kube/config /kube/config
+
+RUN usermod -aG docker go
