@@ -12,7 +12,7 @@ test:
     - docker run -d -p 8153:8153 -p 8154:8154 -n gocd-server gocd/gocd-server; sleep 10
     - docker run -d -p 9200:9200 circleci/elasticsearch; sleep 10
     - docker run -d -v /var/run/docker.sock:/var/run/docker.sock --link gocd-server:go-server gocd-agent-kube; sleep 10
-    - curl --retry 10 --retry-delay 5 -v http://localhost:8153
+    # - curl --retry 10 --retry-delay 5 -v http://localhost:8153
 
 deployment:
   hub:
